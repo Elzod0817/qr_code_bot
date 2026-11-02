@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  bot:
+    build: .
+    container_name: qr_studio_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./qr_studio.db:/app/qr_studio.db
